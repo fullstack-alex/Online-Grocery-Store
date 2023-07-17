@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "557ce313-3a87-4691-aa69-a563612b9afe",
+		"name": "AB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28284958"
+	},
+	"item": [
+		{
+			"name": "Add customer user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uid\": \"\",\r\n    \"name\": \"testName\",\r\n    \"email\": \"test@testMail.com\",\r\n    \"password\": \"testPass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7086/Customer",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7086",
+					"path": [
+						"Customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login username/password",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7086/Customer/test@testMail.com/testPass",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7086",
+					"path": [
+						"Customer",
+						"test@testMail.com",
+						"testPass"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uid\": \"\",\r\n    \"name\": \"testProduct\",\r\n    \"category\": \"testCategoryProduct\",\r\n    \"price\": 25.3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7086/Product",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7086",
+					"path": [
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get products by category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7086/Product/testCategoryProduct",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7086",
+					"path": [
+						"Product",
+						"testCategoryProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Increase Decrease Add item in shopping cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerUid\": \"testCustomerUid\",\r\n    \"productUid\": \"testProductUid\",\r\n    \"quantity\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7086/Cart",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7086",
+					"path": [
+						"Cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Shopping Cart by CustomerUid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7086/Cart/testCustomerUid",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7086",
+					"path": [
+						"Cart",
+						"testCustomerUid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place order with customerUid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7086/Order/alex1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7086",
+					"path": [
+						"Order",
+						"alex1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer's orders by customerUid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7086/Order/alex",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7086",
+					"path": [
+						"Order",
+						"alex"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
